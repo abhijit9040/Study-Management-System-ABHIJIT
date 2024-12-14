@@ -47,7 +47,7 @@ function loginSubmit(event)
         {
             alert("Login successful!");
             localStorage.setItem("loginUser",JSON.stringify({"name":founduser.username,"email":loginemail}))
-            window.location.href='index.html'
+            window.location.href='LandingPage.html'
             return;
         }
         else

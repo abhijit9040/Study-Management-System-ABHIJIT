@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Management System</title>
+    <link rel="stylesheet" href="LandingPageStyles.css">
+</head>
+<body>
+    <div class="container" style="background-color: rgb(176, 156, 194);">
+        <h1>Study Management System</h1>
+        <form id="study-form">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" placeholder="Enter subject name" required>
+
+            <label for="hours">Hours Studied:</label>
+            <input type="number" id="hours" placeholder="Enter hours studied" min="0" max="24" required>
+
+            <label for="total-hours">Total Hours Allotted:</label>
+            <input type="number" id="total-hours" placeholder="Enter total hours" min="1" required>
+
+            <button type="submit">Add Progress</button><br>
+            <button type="button" id="reset-button">Reset All</button> 
+        </form>
+
+        <div id="results">
+            <h2>Study Progress</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Hours Studied</th>
+                        <th>Total Hours</th>
+                        <th>Hours Remaining</th>
+                        <th>Completion (%)</th>
+                    </tr>
+                </thead>
+                <tbody id="progress-table">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="LandingPageScript.js"></script>
+</body>
+</html>
