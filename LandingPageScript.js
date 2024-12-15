@@ -75,3 +75,9 @@ function showNotification(message) {
         setTimeout(() => document.body.removeChild(notification), 1000);
     }, 3000);
 }
+function signOut(event)
+{
+    event.preventDefault();
+    localStorage.removeItem("loginUser");
+    window.location.href='login.html';
+}

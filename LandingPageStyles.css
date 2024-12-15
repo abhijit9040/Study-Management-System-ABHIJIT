@@ -1,24 +1,31 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: whitesmoke;
+    background: linear-gradient(to right, #a8c0ff, #fbc2eb); /* Gradient background with calming blue and pink tones */
     margin: 0;
     padding: 0;
 }
 
+/* Container Styles */
 .container {
     width: 50%;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #983232;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    background-color: #ffffff; /* Clean white background inside the container */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border: 1px solid #ddd;
 }
 
+/* Heading Styles */
 h1 {
     text-align: center;
-    color: #2e1919;
+    color: #004c40; /* Dark teal for focus */
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
+/* Form Styles */
 form {
     display: flex;
     flex-direction: column;
@@ -27,91 +34,118 @@ form {
 
 label {
     margin-bottom: 5px;
-    color: #e4dede;
+    color: #333333; /* Neutral dark color for text */
+    font-weight: bold;
 }
 
 input {
-    margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid #dddddd;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #cccccc;
     border-radius: 5px;
     font-size: 16px;
+    transition: border 0.3s;
 }
 
+input:focus {
+    outline: none;
+    border: 1px solid #00695c; /* Focus on teal for input fields */
+    box-shadow: 0 0 5px rgba(0, 105, 92, 0.5); /* Subtle glow */
+}
+
+/* Button Styles */
 button {
-    padding: 12px 10px;
-    background-color: #4d60edd2;
+    padding: 12px 15px;
+    background-color: #43a047; /* Calming green as the main button color */
     color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button[type="submit"] {
+    background-color: #2e7d32; /* Darker green for submit */
 }
 
 button[type="button"] {
-    background-color: #96615d;
+    background-color: #0288d1; /* Blue for reset or secondary actions */
 }
 
 button:hover {
-    opacity: 0.3;
+    background-color: #004d40; /* Deep teal hover for all buttons */
+    transform: translateY(-2px); /* Slight lift effect */
 }
 
+/* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-}
-
-th, td {
-    padding: 5px;
-    border: 1px solid #dddddd;
-    text-align: center;
-}
-
-th {
-    background-color: #318aca;
-    color: white;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.progress-green {
-    color: green;
-}
-
-.progress-orange {
-    color: orange;
-}
-
-.progress-red {
-    color: red;
-}
-
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-table {
     animation: fadeIn 1s ease-in-out;
 }
 
-button {
-    transition: background-color 0.3s, opacity 0.3s;
+th, td {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    text-align: center;
+    font-size: 14px;
 }
 
+th {
+    background-color: #0288d1; /* Blue table header */
+    color: white;
+    font-weight: bold;
+}
 
+tr:nth-child(even) {
+    background-color: #e8f5e9; /* Light green for rows */
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; /* Alternating white rows */
+}
+
+/* Progress Color Classes */
+.progress-green {
+    color: #43a047; /* Matching green theme */
+}
+
+.progress-orange {
+    color: #ffa000; /* Orange for intermediate progress */
+}
+
+.progress-red {
+    color: #e53935; /* Red for poor progress */
+}
+
+/* Notification Styles */
 .notification {
     position: fixed;
     top: 20px;
     right: 20px;
-    background-color: #4CAF50;
+    background-color: #0288d1; /* Blue for notifications */
     color: white;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     opacity: 1;
     transition: opacity 1s ease-in-out;
+    font-weight: bold;
+}
+
+/* Keyframes for Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Additional Styles */
+button:active {
+    transform: scale(0.98); /* Subtle press-down effect */
 }
