@@ -16,22 +16,20 @@
     <div id="container">
         
         <div id="image-slider">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm0tHJ4BM9QG3tNfF5lIOxK3tlZO3xXRRm_A&s" alt="Image 1" class="slider-image">
+            <img src="https://media.istockphoto.com/id/1401178943/photo/young-lady-using-a-laptop-to-do-research-on-the-internet-woman-working-on-a-project-mixed.jpg?s=612x612&w=0&k=20&c=pptIVFV4VH21H1wict2VTWg2xvb8ykmsmddxiV3iPog=" alt="Image 1" class="slider-image">
             <img src="https://www.jirs.ac.in/uploads/blog/029badb02b94719c627a226a3c80c276.jpg" alt="Image 2" class="slider-image">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Room-education-classroom-children-library-students-1237486.jpg/640px-Room-education-classroom-children-library-students-1237486.jpg" alt="Image 3" class="slider-image">
       
         </div>
         <div id="auth-container">
-            
+            <header id="head">Study Management System</header>
             <div id="signup">
                 <form>
                     <h1>Sign Up</h1>
-                    <label for="username">Username</label>
-                    <input type="text" name="username" id="username">
-                    <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email">
-                    <label for="pass">Password</label>
-                    <input type="password" name="pass" id="pass">
+                    
+                    <input type="text" name="username" id="username" placeholder="username" required>
+                    <input type="email" name="email" id="email" placeholder="E-mail" required>
+                    <input type="password" name="pass" id="pass" placeholder="Password" required>
                     <button id="signupsubmit" onclick="signinSubmit()">Sign In</button>
                     <p>Already a user? <a href="" id="loginbtn" onclick="showLogin(event)">Login</a></p>
                 </form>
@@ -41,9 +39,9 @@
                 <form>
                     <h1>Login</h1>
                     <label for="loginemail">E-mail</label>
-                    <input type="email" name="loginemail" id="loginemail">
+                    <input type="email" name="loginemail" id="loginemail" required>
                     <label for="loginpass">Password</label>
-                    <input type="password" name="loginpass" id="loginpass">
+                    <input type="password" name="loginpass" id="loginpass" required>
                     <button id="loginsubmit" onclick="loginSubmit(event)">Login</button>
                     <p>New user? <a href="" id="signupbtn" onclick="showSignup(event)">Sign Up</a></p>
                 </form>

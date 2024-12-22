@@ -183,3 +183,9 @@ a:hover {
     opacity: 0.6; 
     pointer-events: none; 
 }
+#head{
+font-size: 30px;
+color: green;
+padding-bottom: 90px;
+animation: step-start 2s alternate-reverse 2s infinite reverse reverse;
+}

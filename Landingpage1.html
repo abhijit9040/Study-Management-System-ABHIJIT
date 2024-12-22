@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Management System</title>
+    <link rel="stylesheet" href="LandingPageStyles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <h1>Study Management System</h1>
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container up" style="background-color: rgb(230, 230, 250);">
+        <form id="add-sub">
+            <h1>Add New Subjects to Track</h1>
+            <p>Add subjects that matter most to your learning objectives. By defining the total hours needed, you can prioritize your study time effectively.</p>
+
+            <p><strong>Pro Tip:</strong> Break large subjects (like "Mathematics") into smaller topics (e.g., "Algebra," "Geometry") for better focus and tracking.</p>
+
+            <label for="subject">Subject Name:</label>
+            <input type="text" id="subject" placeholder="Enter subject name (e.g., Math, Physics)" required>
+
+            <label for="total-hours">Total Study Hours Allotted:</label>
+            <input type="number" id="total-hours" placeholder="Enter total study hours (e.g., 50)" min="1" required>
+
+            <p>Once added, subjects will appear in the dropdown menu above. You can log your hours daily to ensure steady progress.</p>
+
+            <button type="submit">Add Subject</button>
+        </form>
+
+        <p>Need to reset and start fresh? The "Reset Progress" button above clears all saved data so you can reconfigure your study goals as needed.</p>
+    </div>
+    <!-- Container for Study Management System (Top right) -->
+    <div class="container down " style="background-color: rgb(176, 156, 194);">
+        <h1>Track Your Study Progress</h1>
+        <p>Stay organized and motivated by logging the hours you study each day. Our system helps you visualize your progress and ensures you meet your study goals efficiently.</p>
+        
+        <p><strong>How it works:</strong> Select a subject from the dropdown below, enter the hours you've studied today, and watch your progress update instantly in the table below.</p>
+
+        <form id="study-form">
+            <h3>Add Study Progress</h3>
+            <label for="selSubject">Select Subject:</label>
+            <select id="selSubject" required>
+                <option value="" disabled selected>Select subject</option>
+                <!-- Dynamic options will be added via JavaScript -->
+            </select>
+
+            <label for="hours">Hours Studied Today:</label>
+            <input type="number" id="hours" placeholder="Enter hours studied" min="0" max="24" required>
+
+            <button type="submit">Add Progress</button><br>
+            <button type="button" id="reset-button">Reset Progress</button>
+        </form>
+
+        <div id="results">
+            <h3>Study Progress Overview</h3>
+            <p>This table shows your study statistics in real time. You can see total hours studied, remaining hours, and the percentage of completion for each subject.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Hours Studied</th>
+                        <th>Total Hours</th>
+                        <th>Hours Remaining</th>
+                        <th>Completion (%)</th>
+                    </tr>
+                </thead>
+                <tbody id="progress-table">
+                    <!-- Dynamic rows will populate here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <p>Make the most of your time and study strategically. Once a subject is complete, feel free to add new topics to continue improving!</p>
+            <button id="signout" onclick="signOut(event)">Sign Out</button>
+        </div>
+    </div>
+
+    <!-- Container for Adding Subjects (Bottom right) -->
+    
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Study Management System. All rights reserved.</p>
+            <!-- <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul> -->
+        </div>
+    </footer>
+
+    <script src="LandingPagescript2.js"></script>
+</body>
+</html>

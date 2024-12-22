@@ -6,7 +6,7 @@ console.log(loginuser)
 if(loginuser)
 {
     alert("Welcome "+loginuser.name)
-    window.location.href='LandingPage.html'
+    window.location.href='LandingPage1.html'
 }
 
 console.log(user)

@@ -1,151 +1,244 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #a8c0ff, #fbc2eb); /* Gradient background with calming blue and pink tones */
     margin: 0;
     padding: 0;
-}
-
-/* Container Styles */
-.container {
-    width: 50%;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff; /* Clean white background inside the container */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    border: 1px solid #ddd;
-}
-
-/* Heading Styles */
-h1 {
-    text-align: center;
-    color: #004c40; /* Dark teal for focus */
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-/* Form Styles */
-form {
+    background-color: #f4f4f9;
+    color: #333;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    margin-bottom: 20px;
+    height: 100vh;
+    overflow: hidden; /* Prevents vertical scroll during animations */
 }
 
-label {
-    margin-bottom: 5px;
-    color: #333333; /* Neutral dark color for text */
+/* Header Section */
+header {
+    width: 100%;
+    background-color: #6c3483;
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header-container h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
     font-weight: bold;
 }
 
-input {
-    margin-bottom: 15px;
+header nav ul li a:hover {
+    color: #f4f4f9;
+}
+
+/* Form container */
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    position: absolute;
+    transition: transform 0.3s ease;
+    margin-top: 100px; /* Add space for header */
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+.container.up {
+    top: 0.2%;
+    left: 1%;
+    padding-left: 20px;
+    /* animation: floatLeft 5s ease-in-out infinite alternate; */
+}
+
+.container.down {
+    bottom: 1%;
+    right: 1%;
+    /* padding-top: 70px;  */
+     /* margin-top: 30%; */
+    /* animation: floatRight 5s ease-in-out infinite alternate; */
+}
+
+h1 {
+    text-align: center;
+    color: #4a235a;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
     padding: 10px;
-    border: 1px solid #cccccc;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    transition: border 0.3s;
 }
 
-input:focus {
-    outline: none;
-    border: 1px solid #00695c; /* Focus on teal for input fields */
-    box-shadow: 0 0 5px rgba(0, 105, 92, 0.5); /* Subtle glow */
-}
-
-/* Button Styles */
 button {
-    padding: 12px 15px;
-    background-color: #43a047; /* Calming green as the main button color */
-    color: #ffffff;
+    padding: 10px 20px;
+    background-color: #6c3483;
+    color: #fff;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 16px;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-button[type="submit"] {
-    background-color: #2e7d32; /* Darker green for submit */
-}
-
-button[type="button"] {
-    background-color: #0288d1; /* Blue for reset or secondary actions */
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #004d40; /* Deep teal hover for all buttons */
-    transform: translateY(-2px); /* Slight lift effect */
+    background-color: #512e5f;
 }
 
-/* Table Styles */
+/* Table styles */
+#results {
+    margin-top: 20px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
-    animation: fadeIn 1s ease-in-out;
+    margin-top: 10px;
 }
 
-th, td {
-    padding: 12px;
-    border: 1px solid #cccccc;
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
     text-align: center;
-    font-size: 14px;
 }
 
-th {
-    background-color: #0288d1; /* Blue table header */
+table th {
+    background-color: #6c3483;
     color: white;
     font-weight: bold;
 }
 
 tr:nth-child(even) {
-    background-color: #e8f5e9; /* Light green for rows */
+    background-color: #f9f9f9;
 }
 
-tr:nth-child(odd) {
-    background-color: #ffffff; /* Alternating white rows */
+tr:hover {
+    background-color: #f1f1f1;
 }
 
-/* Progress Color Classes */
-.progress-green {
-    color: #43a047; /* Matching green theme */
+/* Buttons */
+#reset-button {
+    background-color: #cb4335;
+    transition: background-color 0.3s ease;
 }
 
-.progress-orange {
-    color: #ffa000; /* Orange for intermediate progress */
+#reset-button:hover {
+    background-color: #a93226;
 }
 
-.progress-red {
-    color: #e53935; /* Red for poor progress */
+#signout {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #3498db;
+    border: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
 }
 
-/* Notification Styles */
-.notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #0288d1; /* Blue for notifications */
+#signout:hover {
+    background-color: #2874a6;
+}
+
+/* Animations */
+@keyframes floatLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+@keyframes floatRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(20px);
+    }
+}
+
+/* Footer Section */
+footer {
+    width: 100%;
+    background-color: #6c3483;
     color: white;
-    padding: 12px 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
+    padding: 2px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-container p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-container ul {
+    list-style-type: none;
+    margin: 10px 0 0;
+    padding: 0;
+    display: flex;
+}
+
+.footer-container ul li {
+    margin: 0 15px;
+}
+
+.footer-container ul li a {
+    color: white;
+    text-decoration: none;
     font-weight: bold;
 }
 
-/* Keyframes for Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Additional Styles */
-button:active {
-    transform: scale(0.98); /* Subtle press-down effect */
+footer ul li a:hover {
+    color: #f4f4f9;
 }
