@@ -1,0 +1,158 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    background-image: url("https://media.istockphoto.com/id/145855054/photo/empty-reading-room.jpg?s=612x612&w=0&k=20&c=VyGk_ssqJBN5vVSjor2IJcrakpMIvs2viR86hmaI8RE=");
+    
+}
+
+header {
+    background-color: white;
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(to right, #66bde8, #f47f6b);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #f4f4f9;
+}
+
+/* About Section */
+.about-container {
+    margin-top: 100px;  /* Space for fixed header */
+    padding: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.about-container h2, .about-container h3 {
+    color: #4a235a;
+}
+
+.about-container ul {
+    list-style-type: none;
+    margin: 15px 0;
+    padding: 0;
+}
+
+.about-container ul li {
+    margin-bottom: 10px;
+}
+
+.about-container p {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    margin-top: 30px;
+}
+
+.testimonial {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+.testimonial strong {
+    display: block;
+    margin-top: 5px;
+    color: #4a235a;
+}
+
+/* Footer Section */
+footer {
+    width: 100%;
+    background-color:#1e293b;
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.background-video{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    z-index: -1;
+    opacity: 0.6; 
+    pointer-events: none; 
+}
