@@ -1,0 +1,486 @@
+/*add css*/:root {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.5;
+    background-color: var(--gray-50);
+    background-image: url("https://media.istockphoto.com/id/145855054/photo/empty-reading-room.jpg?s=612x612&w=0&k=20&c=VyGk_ssqJBN5vVSjor2IJcrakpMIvs2viR86hmaI8RE=");
+    
+}
+
+/* Auth styles */
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.auth-box {
+    max-width: 28rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.auth-box h2 {
+    text-align: center;
+    font-size: 1.875rem;
+    font-weight: 800;
+    color: var(--gray-900);
+    margin-bottom: 2rem;
+}
+
+.auth-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--gray-700);
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--gray-300);
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr auto;
+    gap: 1rem;
+    align-items: end;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+   margin-bottom: 18px;
+    width: 100%;
+   
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-10px);
+}
+
+.btn-secondary {
+    background-color: white;
+    color: var(--gray-700);
+    border: 1px solid var(--gray-300);
+    padding: 0.1rem 1.466rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+   
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: var(--gray-50);
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: inherit;
+}
+
+.btn-link:hover {
+    color: var(--primary-hover);
+}
+
+/* Header styles */
+.header {
+
+    box-shadow: 8px 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    font-style: Poppins;
+    background: linear-gradient(to right, #66bde8, #f47f6b);
+}
+
+.header-content {
+    max-width: 80rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.profile-info:hover {
+    background-color: var(--gray-50);
+}
+
+.avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-details .institution {
+    font-size: 0.75rem;
+    color: var(--gray-500);
+}
+
+/* Main content styles */
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.subject-form {
+    background-color: rgb(230, 219, 219);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 1.5rem;
+}
+
+.subject-card {
+    background-color: #b47c7c;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.subject-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.progress-section {
+    margin-bottom: 1rem;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    margin-bottom: 0.25rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 0.5rem;
+    background-color: var(--gray-200);
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.progress-value {
+    height: 100%;
+    border-radius: 9999px;
+    transition: width 0.3s ease;
+}
+
+.progress-value.overall { background-color: var(--primary-color); }
+.progress-value.weekly { background-color: #10b981; }
+.progress-value.monthly { background-color: #3b82f6; }
+
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    max-width: 28rem;
+    width: 100%;
+}
+
+.modal-content h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.hidden {
+    display: none !important;
+}
+/* Animation effects */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes progressAnimation {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body and Background styling */
+body {
+    line-height: 1.5;
+    background-color: var(--gray-50);
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+   animation: forwards;
+}
+
+/* Footer styles */
+.footer {
+    background-color: rgb(94, 70, 96);
+    color: rgb(229, 226, 226);
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.875rem;
+    margin-bottom: 1%;
+    margin-top: 79%;
+    bottom: 0;
+    width: 100%;
+    animation: fadeIn 1s ease-out;
+}
+
+.footer-content {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+/* Progress bar and mood styles */
+.progress-bar {
+    width: 100%;
+    height: 0.5rem;
+    background-color: var(--gray-200);
+    border-radius: 9999px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 0.5rem;
+}
+
+.progress-value {
+    height: 100%;
+    border-radius: 9999px;
+    transition: width 0.3s ease;
+    animation: progressAnimation 1s ease;
+}
+
+.progress-value.overall {
+    background-color: var(--primary-color);
+}
+
+.progress-value.weekly {
+    background-color: #10b981;
+}
+
+.progress-value.monthly {
+    background-color: #3b82f6;
+}
+
+
+
+/* Additional enhancements for progress card */
+.subject-card {
+    background-color: rgb(207, 202, 228);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(199, 189, 189, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+/* Footer hover effect */
+.footer p {
+    transition: color 0.3s ease;
+}
+
+.footer p:hover {
+    color: var(--primary-color);
+}
+
+
+
+.container {
+    padding: 2rem;
+    animation: fadeIn 1s ease;
+}
+
+
+.background-video{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    z-index: -1;
+    opacity: 0.6; 
+    pointer-events: none; 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+   
+}
+.dropdown {
+    position: absolute;
+    top: 60px; /* Adjust based on your avatar size */
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 0.375rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.hidden {
+    display: none;
+}
+
+.dropdown a, .dropdown button {
+    text-decoration: none;
+    color: black;
+    margin: 0.5rem 0;
+    text-align: left;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    padding: 0;
+}
+
+.dropdown a:hover, .dropdown button:hover {
+    color: var(--primary-color); /* Adjust to your theme */
+}
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #333333;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #555555;
+}
